@@ -5,3 +5,6 @@ docker run -d   --name frigate   --restart=unless-stopped   --mount type=tmpfs,t
 # Ports
 5000 -> full access without auth (usefull for integration with Home Assistant)
 8971 -> full access WITH auth. User and password is create using port 5000. 
+
+# Coral
+--device /dev/apex_0:/dev/apex_0 This command able docker to access Coral Edge TPU. Don´t forget to pass the board for your VM (if the case).
